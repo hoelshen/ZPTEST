@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		inheritPrototype(subType,superType){
+			var protoType = Object.create(superType.prototype);
+				protoType.constructor = subType;
+				subType.prototype = protoType;
+		}
+
+		
+		
+
+
+		
+	</script>
+</body>
+</html>

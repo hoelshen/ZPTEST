@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>counter-increment</title>
+    <style>
+        /* .counter{
+            counter-reset: sjh 2 
+        }
+        .counter::before{
+            counter-increment: sjh;
+            content: counter(sjh)
+        } */
+        .counter2{
+            counter-reset: shj 3 shy 4 ;
+            counter-increment: shj shy
+        }
+        .counter2:before{
+            content: counter(shj) '\A' counter(shy);
+            white-space:pre
+        }
+        /* .counter2:after{
+            content: counter(shy)
+        } */
+
+
+    </style>
+
+</head>
+
+<body>
+    <!-- <p class="counter"></p> -->
+
+    <div>
+        <p class="counter2"></p>
+        <!-- <p class="counter3"></p> -->
+    </div>
+</body>
+
+</html>

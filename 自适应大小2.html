@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>自适应大小 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
+
+    <style>
+
+    
+    #container{width:100%;}
+    
+    .one,.two,.three{float:left; height:100px;}
+    .one{width:20%;background:red;}
+    .two{width:60%;background:yellow;}
+    .three{width:20%;background:blue;}
+
+
+    @media (max-width:800px){
+    .one{width:40%}
+    .two{width:60%}
+    .three{width:100%}
+    }
+    @media (max-width:400px){
+    .one{width:100%}
+    .two{width:100%}
+    .three{width:100%}
+    
+    }
+
+    
+    </style>
+
+
+
+    
+</head>
+<body id="container">
+    <div class='one'></div>
+    <div class='two'></div>
+    <div class='three'></div>
+ </div>
+</body>
+</html>

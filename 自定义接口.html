@@ -1,0 +1,56 @@
+<template>
+    
+</template>
+<script>
+    
+const getUrl = urlId => {
+  return (Urls.hasOwnProperty(urlId)) ? Urls[urlId] : ''
+}
+
+// 为不同的接口服务器配置不同的axios实例
+const axios = Axios.create({
+  withCredentials: true,
+  timeout: 10000
+})
+
+const get = (urlId, params) => {
+  try {
+    NProgress.start()
+    let path = getUrl(urlId)
+    if (path) {
+      let result = axios.get(path, {params: params})
+      return result
+    } else {
+      Message.error('当前请求的接口不存在' + urlId)
+      let error = {
+        status: 404,
+        statusText: 'Url is undefined',
+        message: '当前请求的接口不存在' + urlId
+      }
+      return Promise.reject(error)
+    }
+  } finally {
+    NProgress.done()
+  }
+}
+const post = (urlId, params) => {
+  try {
+    NProgress.start()
+    let path = getUrl(urlId)
+    if (path) {
+      let result = axios.post(path, params)
+      return result
+    } else {
+      Message.error('当前请求的接口不存在')
+      let error = {
+        status: 404,
+        statusText: 'Url is undefined',
+        message: '当前请求的接口不存在'
+      }
+      return Promise.reject(error)
+    }
+  } finally {
+    NProgress.done()
+  }
+}
+</script>

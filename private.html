@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+
+	</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// function createPerson(name){
+		// 		var privateName = name;
+		// 		return {
+		// 			getName:function(){
+		// 				return privateName
+		// 			}
+		// 		}
+		// }
+
+
+		function createPerson(name){
+			var privateName = name;
+			function privateFunction(){
+				return 10;
+			}
+			this.getName=function(){
+					privateName;
+					return privateFunction();
+				}
+			
+		}
+
+		createPerson('sjh');
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>rem</title>
+
+ 
+    <style>
+
+    @media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+
+
+        html{font-size: 37.5px;}
+
+
+    }
+    
+
+
+    .con {
+      width: px2rem(200px);
+      height: px2rem(200px);
+      height: 200px;
+      width: 200px;
+      background-color: red;
+    }
+</style>
+<script>
+      meta.setAttribute('content', 'initial-scale=' + 1/dpr + ', maximum-scale=' + 1/dpr + ', minimum-scale=' + 1/dpr + ', user-scalable=no');
+    
+      function px2rem($px){
+            $rem : 75px;
+            @return ($px/$rem) + rem;
+        }
+
+    
+</script>
+</head>
+<body>
+    
+    <div class="con">
+            
+    </div>
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px'   ;
+        
+        // console.log(document.getElementsByTagName('html')[0].style.fontSize)
+        // console.log(window.innerWidth)
+
+        // document.addEventListener('DOMContentLoaded', function(e) {
+        //                 document.getElementsByTagName('html')[0].style.fontSize = window.innerWidth / 10 + 'px';
+        // }, false);
+
+        var con = document.querySelector('.con')
+
+
+        var style =  window.getComputedStyle(con,null)
+        // console.log(con)
+        console.log(style.width)
+        console.log(style.height)        
+        // console.log(con.css.width);
+
+
+
+        function getStyle(obj,attr){
+            return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj)[attr];
+        }
+
+        $('obj').css('attr')
+    </script>
+</body>
+</html>
+
+
+
+
+
+
